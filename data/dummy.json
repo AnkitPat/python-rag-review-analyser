@@ -1,0 +1,63 @@
+[
+    {
+      "review": "The team was great to work with, and my manager was super supportive. Work-life balance was respected.",
+      "tags": ["management", "team culture", "work-life balance"],
+      "mood": "positive",
+      "moderate": true
+    },
+    {
+      "review": "No career growth. You're stuck in the same role for years with no recognition.",
+      "tags": ["career stagnation", "recognition", "growth"],
+      "mood": "frustrated",
+      "moderate": true
+    },
+    {
+      "review": "Toxic environment. Managers don’t care unless you’re in their friend circle.",
+      "tags": ["work culture", "favoritism", "management"],
+      "mood": "negative",
+      "moderate": false
+    },
+    {
+      "review": "Decent pay, flexible hours, but the tech stack is outdated and projects are boring.",
+      "tags": ["compensation", "flexibility", "technology stack"],
+      "mood": "mixed",
+      "moderate": true
+    },
+    {
+      "review": "The HR team is useless. They don't take complaints seriously and are biased.",
+      "tags": ["HR", "complaints", "bias"],
+      "mood": "angry",
+      "moderate": false
+    },
+    {
+      "review": "Great place for freshers. You learn a lot and get mentored well. But after 2 years, growth is slow.",
+      "tags": ["learning", "mentorship", "career growth"],
+      "mood": "neutral",
+      "moderate": true
+    },
+    {
+      "review": "Worked here for 5 years. Good people, but management changed and everything went downhill.",
+      "tags": ["loyalty", "leadership change", "employee sentiment"],
+      "mood": "disappointed",
+      "moderate": true
+    },
+    {
+      "review": "Tiring deadlines and unrealistic expectations. Managers keep pushing overtime with no benefits.",
+      "tags": ["deadlines", "overtime", "work pressure"],
+      "mood": "stressed",
+      "moderate": true
+    },
+    {
+      "review": "Loved the remote-first culture and autonomy in decision-making.",
+      "tags": ["remote work", "autonomy", "flexibility"],
+      "mood": "happy",
+      "moderate": true
+    },
+    {
+      "review": "They fired people during appraisal season. No respect for loyalty.",
+      "tags": ["layoffs", "loyalty", "appraisals"],
+      "mood": "betrayed",
+      "moderate": false
+    }
+  ]
+  
