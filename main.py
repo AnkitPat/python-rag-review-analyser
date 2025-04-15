@@ -8,6 +8,8 @@ import hashlib
 import json
 import os
 from contextlib import asynccontextmanager
+from langchain_core.documents import Document
+
 
 print(os.getenv('OPENAI_API_KEY'))
 
@@ -99,15 +101,26 @@ def query_review(text, k=3):
     prompt = prompt.format_prompt(user_review=text, last_reviews=context)
     model = OpenAI()
     response = model.invoke(prompt)
-    
+    parsedReponse = json.loads(response)
+    doc_id = hashlib.md5(text.encode()).hexdigest()
+    db.add_documents([Document(page_content=json.dumps({"review": text, "tags": parsedReponse["tags"], "mood": parsedReponse["mood"], "moderate": parsedReponse["moderate"]}), metadata={"id": doc_id})], ids=[doc_id])
+    print(response, 'response')
+    print("Added one more document")
     return response
 
 @app.post("/query_review/")
 async def query_review_endpoint(request: QueryRequest):
     try:
         response = query_review(request.text, request.k)
+        
         return {"response": json.loads(response)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@app.get("/len_documents/")
+async def get_documents_length():
+    db = Chroma(persist_directory=persist_dir, embedding_function=get_embedding_function())
+    num_docs = len(db._collection.get()["ids"])
+    return {"document length": num_docs}
 
 # Run with: uvicorn <filename>:app --reload
