@@ -9,6 +9,7 @@ import json
 import os
 from contextlib import asynccontextmanager
 from langchain_core.documents import Document
+from fastapi.middleware.cors import CORSMiddleware
 
 
 print(os.getenv('OPENAI_API_KEY'))
@@ -22,7 +23,13 @@ async def lifespan(app: FastAPI):
 
 # Initialize FastAPI
 app = FastAPI(lifespan=lifespan)
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or ["https://your-frontend-site.com"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 persist_dir = "./chroma_reviews_db"
 
 def get_embedding_function():
