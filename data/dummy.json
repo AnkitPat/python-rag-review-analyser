@@ -3,7 +3,7 @@
       "review": "The team was great to work with, and my manager was super supportive. Work-life balance was respected.",
       "tags": ["management", "team culture", "work-life balance"],
       "mood": "positive",
-      "moderate": true
+      "moderate": false
     },
     {
       "review": "No career growth. You're stuck in the same role for years with no recognition.",
@@ -27,13 +27,13 @@
       "review": "The HR team is useless. They don't take complaints seriously and are biased.",
       "tags": ["HR", "complaints", "bias"],
       "mood": "angry",
-      "moderate": false
+      "moderate": true
     },
     {
       "review": "Great place for freshers. You learn a lot and get mentored well. But after 2 years, growth is slow.",
       "tags": ["learning", "mentorship", "career growth"],
       "mood": "neutral",
-      "moderate": true
+      "moderate": false
     },
     {
       "review": "Worked here for 5 years. Good people, but management changed and everything went downhill.",
@@ -51,13 +51,13 @@
       "review": "Loved the remote-first culture and autonomy in decision-making.",
       "tags": ["remote work", "autonomy", "flexibility"],
       "mood": "happy",
-      "moderate": true
+      "moderate": false
     },
     {
       "review": "They fired people during appraisal season. No respect for loyalty.",
       "tags": ["layoffs", "loyalty", "appraisals"],
       "mood": "betrayed",
-      "moderate": false
+      "moderate": true
     }
   ]
   
